@@ -1,0 +1,45 @@
+{
+  "name": "haruncpi/laravel-simple-captcha",
+  "description": "A laravel simple captcha package",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "laravel",
+    "simple",
+    "captcha"
+  ],
+  "type": "library",
+  "authors": [
+    {
+      "name": "MD.HARUN-UR-RASHID",
+      "email": "harun.cox@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=5.6"
+  },
+  "autoload": {
+    "files": [
+      "src/helpers.php"
+    ],
+    "psr-4": {
+      "Haruncpi\\LaravelSimpleCaptcha\\": "src"
+    }
+  },
+  "scripts": {
+    "phpunit": "phpunit"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Haruncpi\\LaravelSimpleCaptcha\\ServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
+}
