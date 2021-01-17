@@ -8,8 +8,6 @@ class SimpleCaptcha{
     private $num2;
     private $actionNumber;
     private $arr;
-    private $sessionKey = '_simple_captcha';
-    
 
     private function generate()
     {
@@ -61,17 +59,15 @@ class SimpleCaptcha{
 
 
 
-    public static function getQuestion()
+    public static function getQuestion($sessionKey)
     {
-        $instance = new self();
-        Session::put($instance->sessionKey,$instance->generate());
+        Session::put($sessionKey, $instance->generate());
 
-        return Session::get($instance->sessionKey)['question'];
+        return Session::get($sessionKey)['question'];
     }
 
-    public static function getAnswer()
+    public static function getAnswer($sessionKey)
     {
-        $instance = new self();
-        return Session::get($instance->sessionKey)['answer'];
+        return Session::get($sessionKey)['answer'];
     }
 }
