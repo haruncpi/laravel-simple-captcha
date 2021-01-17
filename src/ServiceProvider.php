@@ -12,7 +12,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         Validator::extend('simple_captcha', function($attribute, $value, $parameters)
         {
-            return $value == SimpleCaptcha::getAnswer();
+            return $value == SimpleCaptcha::getAnswer($attribute);
         },'Invalid captcha answer');
     }
 
