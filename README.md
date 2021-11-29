@@ -14,7 +14,7 @@
 ## Features
 - Lightweight
 - Simple & easy to use
-- Support Laravel 5, 6
+- Support Laravel version >= 5
 - Captcha validation rules
 - Customizable
 
